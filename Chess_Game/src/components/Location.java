@@ -8,6 +8,7 @@ public class Location {
 		row = r;
 		column = c;
 	}
+	///--------------------------
 	
 	public Location(String loc) {
 // loc contains 2 char  column - alphabet ,row-number
