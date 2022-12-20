@@ -1,4 +1,4 @@
-package Componenets;
+package components;
 
 public enum Color {
 	
