@@ -32,6 +32,12 @@ public abstract class Piece {
 	
 	protected abstract boolean isValidMove(Location To) throws InvalidMoveException;
 	
-	
+	public String toString() {
+		return color.equals(Color.BLACK) ? symbol.toLowerCase() : symbol;
+	}
+
+	public String toStringType() {
+		return "Piece ";
+	};
 
 }

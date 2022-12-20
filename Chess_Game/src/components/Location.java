@@ -75,7 +75,6 @@ public class Location {
 	}
 	
 	
-
 	public boolean isAntiDiagonalTo(Location to)
 	{	
 		return (this.row-to.row) == this.column - to.column;
