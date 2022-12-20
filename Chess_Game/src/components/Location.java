@@ -4,6 +4,10 @@ public class Location {
 	private int row;
 	private int column;
 	
+	private Piece piece;
+	
+
+
 	public Location(int r, int c) {
 		row = r;
 		column = c;
@@ -38,6 +42,15 @@ public class Location {
 	public int getColumn() {
 		return column;
 	}
+	
+	//get piece on the location
+	public Piece getPiece() {
+		return piece;
+	}
+
+	public void setPiece(Piece piece) {
+		this.piece = piece;
+	}
 
 
 	//a location l1 is vertical to location l2 if they lie in same column
@@ -60,5 +73,14 @@ public class Location {
 	{
 		return (this.row + this.column) == (to.row + to.column);
 	}
+	
+	
+
+	public boolean isAntiDiagonalTo(Location to)
+	{	
+		return (this.row-to.row) == this.column - to.column;
+	}
+	
+	
 	
 }
