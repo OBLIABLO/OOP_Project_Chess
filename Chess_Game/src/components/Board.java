@@ -21,8 +21,6 @@ public class Board {
 		isKingCaptured = false;
 	}
 	
-	
-	
 	public void printTheBoard() {
 
 		System.out.println("     " + "a b c d e f g h");
@@ -41,6 +39,7 @@ public class Board {
 		}
 		System.out.println("     " + "a b c d e f g h");
 	}
+	
 	
 	public Location getLocation(String str) {
 		Location currentLoc = new Location(str);
