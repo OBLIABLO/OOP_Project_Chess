@@ -1,5 +1,6 @@
 package components;
 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -10,7 +11,6 @@ public class Game {
 	private Board board;
 	private Integer turn;
 	private Boolean gameInAction;
-	private ArrayList<String> validMoves;
 	Scanner sc = new Scanner(System.in);
 	
 	public Game(Board board) {
@@ -18,7 +18,6 @@ public class Game {
 		this.board = board;
 		gameInAction = true;
 		turn = 0;
-		validMoves = new ArrayList<>();
 
 	}
 	
@@ -113,7 +112,6 @@ public class Game {
 			}
 
 			pieceToMove.moveToLocation(to);
-			validMoves.add(moveString);
 			changeTurn();
 		} catch (InvalidMoveException e) {
 			System.out.println(e.getMessage());
