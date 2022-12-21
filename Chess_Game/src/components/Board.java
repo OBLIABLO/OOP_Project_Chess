@@ -7,7 +7,7 @@ public class Board {
 	public Location[][] locations;
 	List<Piece> whiteCaptured;
 	List<Piece> blackCaptured;
-	boolean isKingCaptured;
+	Boolean isKingCaptured;
 	
 	public Board() {
 		locations = new Location[8][8];
@@ -92,7 +92,7 @@ public class Board {
 		}
 	}
 	
-	public boolean freeHorizontalPath(Location from, Location to) throws InvalidMoveException {
+	public Boolean freeHorizontalPath(Location from, Location to) throws InvalidMoveException {
 		// constant row- increasing column
 		if (from.getColumn() < to.getColumn()) {
 			for (int i = from.getColumn() + 1; i < to.getColumn(); i++) {
@@ -117,7 +117,7 @@ public class Board {
 
 	}
 	
-	public boolean freeVerticalPath(Location from, Location to) throws InvalidMoveException {
+	public Boolean freeVerticalPath(Location from, Location to) throws InvalidMoveException {
 		if (from.getRow() < to.getRow()) {
 			for (int i = from.getRow() + 1; i < to.getRow(); i++) {
 				if (locations[i][from.getColumn()].getPiece() == null) {
@@ -141,7 +141,7 @@ public class Board {
 
 	}
 	
-	public boolean freeDiagonalPath(Location from, Location to) throws InvalidMoveException {
+	public Boolean freeDiagonalPath(Location from, Location to) throws InvalidMoveException {
 
 		if (from.getColumn() < to.getColumn()) {
 
@@ -177,11 +177,11 @@ public class Board {
 		}
 	}
 	
-	public boolean freeAntidiagonalPath(Location from, Location to) throws InvalidMoveException {
+	public Boolean freeAntidiagonalPath(Location from, Location to) throws InvalidMoveException {
 		if (from.getColumn() < to.getColumn()) {
 
-			int row = from.getRow() + 1;
-			int col = from.getColumn() + 1;
+			Integer row = from.getRow() + 1;
+			Integer col = from.getColumn() + 1;
 
 			while (col < to.getColumn()) {
 
@@ -195,8 +195,8 @@ public class Board {
 				
 			} return true;
 		} else {
-			int row = from.getRow() - 1;
-			int col = from.getColumn() - 1;
+			Integer row = from.getRow() - 1;
+			Integer col = from.getColumn() - 1;
 
 			while (col > to.getColumn()) {
 
@@ -207,11 +207,8 @@ public class Board {
 				} else {
 					throw new InvalidMoveException(InvalidMoveException.OBSTACLE);
 				}
-			}return true;
-
+			}
+			return true;
 		}
 	}
-
-
-
 }

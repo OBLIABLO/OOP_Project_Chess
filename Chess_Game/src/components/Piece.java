@@ -30,7 +30,7 @@ public abstract class Piece {
 	//abstract methods to move a piece to some location and to check whether a moveis valid
 	public abstract void moveToLocation(Location newLocation) throws InvalidMoveException;
 	
-	protected abstract boolean isValidMove(Location To) throws InvalidMoveException;
+	protected abstract Boolean isValidMove(Location To) throws InvalidMoveException;
 	
 	public String toString() {
 		return color.equals(Color.BLACK) ? symbol.toLowerCase() : symbol;

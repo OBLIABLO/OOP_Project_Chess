@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
 public class Game {
 
 	private Board board;
-	private int turn;
-	private boolean gameInAction;
+	private Integer turn;
+	private Boolean gameInAction;
 	private ArrayList<String> validMoves;
 	Scanner sc = new Scanner(System.in);
 	
@@ -64,8 +64,8 @@ public class Game {
 		Matcher commandMatcher = patternCommand.matcher(moveString);
 		Matcher movementMatcher = patternMovement.matcher(moveString);
 
-		boolean commandMatchFound = commandMatcher.find();
-		boolean movementMatchFound = movementMatcher.find();
+		Boolean commandMatchFound = commandMatcher.find();
+		Boolean movementMatchFound = movementMatcher.find();
 
 		if (commandMatchFound) {
 			System.out.println("\n             =========================");
@@ -126,7 +126,7 @@ public class Game {
 	 * Checks if there is a piece in the selected location
 	 * @param loc
 	 */
-	private boolean thereIsPieceInLoc(Location loc) {
+	private Boolean thereIsPieceInLoc(Location loc) {
 		if (board.getPieceAt(loc) != null) {
 			return true;
 		} else {
@@ -139,7 +139,7 @@ public class Game {
 	 * 
 	 */
 	
-	private boolean checkIfPieceToMoveMatchesPlayer(Location locTo) {
+	private Boolean checkIfPieceToMoveMatchesPlayer(Location locTo) {
 		if ((turn == 0 && board.getPieceAt(locTo).color.equals(Color.WHITE))
 				|| (turn == 1 && board.getPieceAt(locTo).color.equals(Color.BLACK))) {
 			return true;
@@ -149,7 +149,7 @@ public class Game {
 	}
 
 
-	public boolean exitGame() {
+	public Boolean exitGame() {
 		System.out.print("Are you sure you want to exit this game? \nPlease type 'yes' or 'no': ");
 		String answer = sc.nextLine().trim();
 		if (answer.toLowerCase().equals("yes")) {
@@ -175,8 +175,4 @@ public class Game {
 				+ ":x � Exit\n"
 				+ "                  ==============================================\n");
 	}
-
-	
-	
-	
 }
