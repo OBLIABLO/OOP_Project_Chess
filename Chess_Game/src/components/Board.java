@@ -31,7 +31,7 @@ public class Board {
 				if (locations[i][j].getPiece() != null) {
 					System.out.print(" " + locations[i][j].getPiece().toString());
 				} else {
-					System.out.print("  ");
+					System.out.print(" -");
 				}
 			}
 			System.out.print(" " + (8 - i));
