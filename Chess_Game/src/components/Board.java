@@ -21,8 +21,6 @@ public class Board {
 		isKingCaptured = false;
 	}
 	
-	
-	
 	public void printTheBoard() {
 
 		System.out.println("     " + "a b c d e f g h");
@@ -41,6 +39,7 @@ public class Board {
 		}
 		System.out.println("     " + "a b c d e f g h");
 	}
+	
 	
 	public Location getLocation(String str) {
 		Location currentLoc = new Location(str);
@@ -145,8 +144,8 @@ public class Board {
 
 		if (from.getColumn() < to.getColumn()) {
 
-			int row = from.getRow() - 1;
-			int col = from.getColumn() + 1;
+			Integer row = from.getRow() - 1;
+			Integer col = from.getColumn() + 1;
 
 			while (col < to.getColumn()) {
 
@@ -160,8 +159,8 @@ public class Board {
 				
 			} return true;
 		} else {
-			int row = from.getRow() + 1;
-			int col = from.getColumn() - 1;
+			Integer row = from.getRow() + 1;
+			Integer col = from.getColumn() - 1;
 
 			while (col > to.getColumn()) {
 

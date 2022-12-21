@@ -1,8 +1,8 @@
 package components;
 
 public class Location {
-	private int row;
-	private int column;
+	private Integer row;
+	private Integer column;
 	
 	private Piece piece;
 	
@@ -26,20 +26,20 @@ public class Location {
 //		g	->		6			'7'		->	1
 //		h	->		7			'8'		->	0
 		
-		char columnChar = loc.charAt(0);
-		char rowChar = loc.charAt(1);
+		Character  columnChar = loc.charAt(0);
+		Character  rowChar = loc.charAt(1);
 		row = rowChar - '0';
 		row = 8-row;
 		column = columnChar - 'a';
 		
 	}
 
-	public int getRow() {
+	public Integer getRow() {
 		return row;
 	}
 
 
-	public int getColumn() {
+	public Integer getColumn() {
 		return column;
 	}
 	
@@ -54,14 +54,14 @@ public class Location {
 
 
 	//a location l1 is vertical to location l2 if they lie in same column
-	public boolean isVerticalTo(Location to)
+	public Boolean isVerticalTo(Location to)
 	{
 		return this.column == to.column;
 	}
 	
 	
 	// a location l1 is horizontal to location l2 if they lie in same row
-	public boolean isHorizontalTo(Location to)
+	public Boolean isHorizontalTo(Location to)
 	{
 		return this.row == to.row;
 	}
@@ -69,17 +69,14 @@ public class Location {
 	
 	// a location l1 is diagonal to location l2 if the sum of row and column of l1 is equal to sum
 	//of row and column of l2
-	public boolean isDiagonalTo(Location to)
+	public Boolean isDiagonalTo(Location to)
 	{
 		return (this.row + this.column) == (to.row + to.column);
 	}
 	
 	
-	public boolean isAntiDiagonalTo(Location to)
+	public Boolean isAntiDiagonalTo(Location to)
 	{	
 		return (this.row-to.row) == this.column - to.column;
 	}
-	
-	
-	
 }
