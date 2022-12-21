@@ -144,8 +144,8 @@ public class Board {
 
 		if (from.getColumn() < to.getColumn()) {
 
-			int row = from.getRow() - 1;
-			int col = from.getColumn() + 1;
+			Integer row = from.getRow() - 1;
+			Integer col = from.getColumn() + 1;
 
 			while (col < to.getColumn()) {
 
@@ -159,8 +159,8 @@ public class Board {
 				
 			} return true;
 		} else {
-			int row = from.getRow() + 1;
-			int col = from.getColumn() - 1;
+			Integer row = from.getRow() + 1;
+			Integer col = from.getColumn() - 1;
 
 			while (col > to.getColumn()) {
 
