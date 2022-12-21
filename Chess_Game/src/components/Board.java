@@ -210,4 +210,37 @@ public class Board {
 			return true;
 		}
 	}
+	
+	
+	public void init() {
+		// BLACK
+		new Rook(Color.BLACK, locations[0][0], this);
+		new Rook(Color.BLACK, locations[0][7], this);
+		new Knight(Color.BLACK, locations[0][1], this);
+		new Knight(Color.BLACK, locations[0][6], this);
+		new Bishop(Color.BLACK, locations[0][2], this);
+		new Bishop(Color.BLACK, locations[0][5], this);
+		new Queen(Color.BLACK, locations[0][3], this);
+		new King(Color.BLACK, locations[0][4], this);
+		for (int i = 0; i < 8; i++) {
+			new Pawn(Color.BLACK, locations[1][i], this);
+		}
+
+		// WHITE
+		new Rook(Color.WHITE, locations[7][0], this);
+		new Rook(Color.WHITE, locations[7][7], this);
+		new Knight(Color.WHITE, locations[7][1], this);
+		new Knight(Color.WHITE, locations[7][6], this);
+		new Bishop(Color.WHITE, locations[7][2], this);
+		new Bishop(Color.WHITE, locations[7][5], this);
+		new Queen(Color.WHITE, locations[7][3], this);
+		new King(Color.WHITE, locations[7][4], this);
+		for (int i = 0; i < 8; i++) {
+			new Pawn(Color.WHITE, locations[6][i], this);
+		}
+	}
+
+
+
+
 }
