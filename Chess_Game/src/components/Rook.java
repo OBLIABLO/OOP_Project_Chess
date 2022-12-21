@@ -2,8 +2,8 @@ package components;
 
 public class Rook extends Piece {
 
-	public Rook(Color color, Location location, String symbol, Board board) {
-		super(color, location, symbol, board);
+	public Rook(Color color, Location location,Board board) {
+		super(color, location, "P", board);
 		// TODO Auto-generated constructor stub
 	}
 
