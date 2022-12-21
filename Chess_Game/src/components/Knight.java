@@ -15,6 +15,8 @@ public class Knight extends Piece {
 		}
 	}
 	
+	
+	
 	@Override
 	protected Boolean isValidMove(Location locTo) {
 
