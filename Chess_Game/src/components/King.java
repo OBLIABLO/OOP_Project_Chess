@@ -20,7 +20,7 @@ public class King extends Piece {
 	//checks if the King can make these moves
 	//king can go one step at a time,vertical,horizontal,diagonal,anti-diagonal
 	@Override
-	public boolean isValidMove(Location locTo) {
+	public Boolean isValidMove(Location locTo) {
 
 		if (location.isVerticalTo(locTo)
 				&& ((locTo.getRow() == 1 + location.getRow()) || (locTo.getRow() == location.getRow() - 1))) {

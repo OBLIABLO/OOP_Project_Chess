@@ -17,7 +17,7 @@ public class Pawn extends Piece{
 	}
 
 	@Override
-	protected boolean isValidMove(Location To) throws InvalidMoveException {
+	protected Boolean isValidMove(Location To) throws InvalidMoveException {
 		// TODO Auto-generated method stub
 		return false;
 	}

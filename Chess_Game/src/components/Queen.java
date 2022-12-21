@@ -19,7 +19,7 @@ public class Queen extends Piece {
 	//checks if the Queen can make these moves
 	//Queen can go vertical,horizontal,diagonal,anti-diagonal
 	@Override
-	public boolean isValidMove(Location locTo) throws InvalidMoveException {
+	public Boolean isValidMove(Location locTo) throws InvalidMoveException {
 
 		if (location.isDiagonalTo(locTo) && board.freeDiagonalPath(location, locTo)) {
 			return true;
