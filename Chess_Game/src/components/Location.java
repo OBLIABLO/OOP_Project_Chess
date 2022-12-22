@@ -8,7 +8,7 @@ public class Location {
 	
 
 
-	public Location(int r, int c) {
+	public Location(Integer r, Integer c) {
 		row = r;
 		column = c;
 	}

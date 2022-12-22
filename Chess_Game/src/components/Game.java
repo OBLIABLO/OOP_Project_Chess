@@ -55,7 +55,7 @@ public class Game {
 	
 	public void handleInput(String moveString) {
 		moveString = moveString.trim();
-		Pattern patternCommand = Pattern.compile(":[hsox]", Pattern.CASE_INSENSITIVE);
+		Pattern patternCommand = Pattern.compile(":[hx]", Pattern.CASE_INSENSITIVE);
 		Pattern patternMovement = Pattern.compile("[a-h][1-8][a-h][1-8]", Pattern.CASE_INSENSITIVE);
 
 		Matcher commandMatcher = patternCommand.matcher(moveString);
