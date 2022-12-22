@@ -32,9 +32,9 @@ public class Game {
 			}
 
 			if (turn == 0) {
-				System.out.print("\nWhite plays. Please insert your move: ");
+				System.out.println("\nWhite plays. Please insert your move: ");
 			} else {
-				System.out.print("\nBlack plays. Please insert your move: ");
+				System.out.println("\nBlack plays. Please insert your move: ");
 			}
 
 			String round = sc.nextLine();
@@ -65,13 +65,13 @@ public class Game {
 		Boolean movementMatchFound = movementMatcher.find();
 
 		if (commandMatchFound) {
-			System.out.println("\n             =========================");
+			System.out.println("\n");
 				handleCommand(moveString);
 		} else if (movementMatchFound && moveString.length() == 4) {
-			System.out.println("=====>");
+			System.out.println("\n");
 			handleMove(moveString);
 		} else {
-			System.out.println("\n!!! This is not a valid input. Please type a move or choose one of the available commands.\n"
+			System.out.println("\n!!! This is not a valid input.\n"
 					+ "(You can type':h' for the help Menu.)\n");
 			
 		}
@@ -149,7 +149,7 @@ public class Game {
 		System.out.print("Are you sure you want to exit this game? \nPlease type 'yes' or 'no': ");
 		String answer = sc.nextLine().trim();
 		if (answer.toLowerCase().equals("yes")) {
-			System.out.println("Bye!");
+			System.out.println("Sayonara Loser");
 			return true;
 		} else if (answer.toLowerCase().equals("no")) {
 			board.printTheBoard();
@@ -162,13 +162,16 @@ public class Game {
 	}
 	
 	public void printHelp() {
-		System.out.println("                  ==============================================\n"
-				+ "To move a piece you have to write the coordinates\n"
-				+ "(the letter of the column and the number of the row) of its current position.\n"
-				+ "Then, (without a space) you have to write the coordinates of the location you want to move this piece to.\n"
-				+ "  ==> For example to move a pawn from the location b2 to location b3, you have to write ==>  b2b3.\n"
-				+ "\nFurthermore, you can choose one of the following commands.\n" + ":h � Show the help menu\r\n"
-				+ ":x � Exit\n"
-				+ "                  ==============================================\n");
+		System.out.println("\n");
+		System.out.println("==============================================================================================================\n"
+				+ "| To move a piece you have to write the coordinates                                                           |\n"
+				+ "| (the letter of the column and the number of the row) of its current position.                               |\n"
+				+ "| Then, (without a space) you have to write the coordinates of the location you want to move this piece to.   |\n"
+				+ "|  ==> For example to move a pawn from the location b2 to location b3, you have to write ==>  b2b3.           |\n"
+				+ "|                                                                                                             |\n"
+				+ "|Furthermore, you can choose one of the following commands.                                                   |\n" 
+				+ "|:h � Show the help menu                                                                                      |\n"
+			    + "|:x � Exit                                                                                                    |\n"
+				+ " ==============================================================================================================\n");
 	}
 }
