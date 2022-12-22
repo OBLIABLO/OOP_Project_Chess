@@ -79,4 +79,13 @@ public class Location {
 	{	
 		return (this.row-to.row) == this.column - to.column;
 	}
+	
+	@Override
+	public String toString() {
+		//String rowString = String.valueOf(8-row);
+		int columnAsciiValue=column+97;
+		char c= (char)(columnAsciiValue); 
+		
+		return "" + c + (8-row); 
+	}
 }
