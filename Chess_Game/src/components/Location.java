@@ -50,6 +50,10 @@ public class Location {
 
 	public void setPiece(Piece piece) {
 		this.piece = piece;
+		if(piece!= null)
+		{
+			piece.setLocation(this);
+		}
 	}
 
 
