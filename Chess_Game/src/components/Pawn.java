@@ -34,14 +34,15 @@ public class Pawn extends Piece{
 	
 	//Checks if the pawn moves on a diagonal or anti diagonal path when it is capturing a piece
 	private Boolean isValidWhenCapturing(Location locTo) throws InvalidMoveException {
-
-		if (((location.getColumn() - locTo.getColumn() == 1) || (location.getColumn() - locTo.getColumn() == -1))
-				&& (location.getRow() - locTo.getRow() == 1)) {
-			return true;
-		} else {
-			throw new InvalidMoveException(InvalidMoveException.PAWN_CAPTURE_ONLY_DIAGONALLY);
+		  // Check if the pawn is moving diagonally
+		  if (Math.abs(location.getColumn() - locTo.getColumn()) == Math.abs(location.getRow() - locTo.getRow())) {
+		    // Check if the pawn is moving in the correct direction (towards the opponent's pieces)
+		    if ((this.color == Color.BLACK && locTo.getRow() > location.getRow()) || (this.color == Color.WHITE && locTo.getRow() < location.getRow())) {
+		      return true;
+		    }
+		  }
+		  throw new InvalidMoveException(InvalidMoveException.PAWN_CAPTURE_ONLY_DIAGONALLY);
 		}
-	}
 	
 	//Checks if the pawn moves forwards when it isn't capturing a piece
 	private Boolean isValidWhenNotCapturing(Location locTo) throws InvalidMoveException {
