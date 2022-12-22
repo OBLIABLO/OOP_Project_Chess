@@ -3,7 +3,7 @@ package components;
 public class Rook extends Piece {
 
 	public Rook(Color color, Location location,Board board) {
-		super(color, location, "P", board);
+		super(color, location, "R", board);
 		// TODO Auto-generated constructor stub
 	}
 
